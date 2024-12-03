@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Snatcher</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #1e1b18; /* Dark rust theme background */
+            color: white;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            background: #2d1500;
+            box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+        }
+        header h1 {
+            font-size: 3em;
+            color: #ff8c00;
+        }
+        .hero {
+            height: 80vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background: linear-gradient(180deg, #2d1500, #1e1b18);
+            position: relative;
+            overflow: hidden;
+        }
+        .hero .cube {
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            transform-style: preserve-3d;
+            animation: spin 15s infinite linear;
+        }
+        .cube div {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background: rgba(255, 69, 0, 0.8);
+            border: 1px solid #b34700;
+        }
+        .cube .front  { transform: rotateY(0deg) translateZ(100px); }
+        .cube .back   { transform: rotateY(180deg) translateZ(100px); }
+        .cube .right  { transform: rotateY(90deg) translateZ(100px); }
+        .cube .left   { transform: rotateY(-90deg) translateZ(100px); }
+        .cube .top    { transform: rotateX(90deg) translateZ(100px); }
+        .cube .bottom { transform: rotateX(-90deg) translateZ(100px); }
+        
+        @keyframes spin {
+            from {
+                transform: rotateX(0deg) rotateY(0deg);
+            }
+            to {
+                transform: rotateX(360deg) rotateY(360deg);
+            }
+        }
+
+        .hero h2 {
+            font-size: 2.5em;
+            margin: 0;
+            text-align: center;
+            color: #ff8c00;
+            z-index: 2;
+        }
+
+        .download {
+            margin-top: 30px;
+            z-index: 2;
+        }
+
+        .download a {
+            padding: 15px 40px;
+            background-color: #ff8c00;
+            color: white;
+            font-size: 1.5em;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: background 0.3s ease-in-out;
+            box-shadow: 0px 6px 10px rgba(0,0,0,0.2);
+        }
+        .download a:hover {
+            background-color: #ffa640;
+        }
+
+        footer {
+            padding: 20px;
+            text-align: center;
+            background: #2d1500;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Video Snatcher</h1>
+    </header>
+
+    <div class="hero">
+        <h2>Download Videos Instantly!</h2>
+        <div class="cube">
+            <div class="front"></div>
+            <div class="back"></div>
+            <div class="right"></div>
+            <div class="left"></div>
+            <div class="top"></div>
+            <div class="bottom"></div>
+        </div>
+        <div class="download">
+            <a href="download/VideoSnatcher.apk">Download Now</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Video Snatcher. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
